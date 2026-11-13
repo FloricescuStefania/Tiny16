@@ -1,0 +1,13 @@
+// Programul de mai jos are mai multe erori de sintaxa
+int tiny()
+{
+    int x;
+    x = 10;
+    write x;        // ';' inainte de '}' nu este permis (separator, nu terminator)
+}
+
+int f(int a, )
+{
+    x = ;
+    return a
+}
