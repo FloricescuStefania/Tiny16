@@ -1,13 +1,19 @@
-// Programul de mai jos are mai multe erori de sintaxa
-int tiny()
-{
-    int x;
-    x = 10;
-    write x;        // ';' inainte de '}' nu este permis (separator, nu terminator)
+// Program valid pentru testarea listener-ului
+int[10] a;
+
+int add(int x, int y) {
+    return x + y
 }
 
-int f(int a, )
-{
-    x = ;
-    return a
+int tiny() {
+    int i;
+    char c;
+    i = 0;
+    c = 'a';
+    while (i < 10) {
+        a[i] = add(i, 2) * 3;
+        i = i + 1
+    };
+    if (i == 10) write -i else read i;
+    write length a
 }

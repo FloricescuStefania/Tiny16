@@ -2,6 +2,7 @@ import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Token;
+import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import java.io.IOException;
 
 public class Main {
@@ -72,6 +73,11 @@ public class Main {
                 System.out.println("PARSE TREE");
                 System.out.println(tree.toStringTree(parser));
             }
+
+            // ================= PARSE TREE WALK (LISTENER) =================
+            System.out.println();
+            System.out.println("LISTENER");
+            ParseTreeWalker.DEFAULT.walk(new TinyListener(), tree);
 
             // ================= ABSTRACT SYNTAX TREE =================
             AstBuilder builder = new AstBuilder();
